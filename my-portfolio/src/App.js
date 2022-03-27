@@ -1,42 +1,22 @@
 import React, { useState } from 'react';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-  const [contactSelected, setContactSelected] = useState(false);
-  const [categories] = useState([
-    {
-      name: 'commercial',
-      description: 'Photos of grocery stores, food trucks, and other commercial projects',
-    },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
-  ]);
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
     <div>
-      <Nav
-      categories={categories}
-      setCurrentCategory={setCurrentCategory}
-      currentCategory={currentCategory}
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
-      ></Nav>
+      <Header></Header>
       <main>
-      {!contactSelected ? (
-        <>
-          <Gallery currentCategory={currentCategory}></Gallery>
-          <About></About>
-        </>
-        ) : (
-            <ContactForm></ContactForm>
-          )}
+        <About></About>
+        <Portfolio></Portfolio>
+        <ContactForm></ContactForm>
+        <Resume></Resume>
       </main>
+      <Footer></Footer>
     </div>
   );
 }
