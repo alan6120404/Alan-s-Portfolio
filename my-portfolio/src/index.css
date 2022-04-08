@@ -24,10 +24,12 @@ main {
 
 html,
 body {
-  min-height: 100%;
+  min-height: 90vh;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -82,6 +84,7 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  text-align: center;
 }
 
 a {
@@ -123,7 +126,7 @@ button {
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  background-color: #916953;
 }
 
 button:hover {
@@ -190,6 +193,15 @@ textarea {
 	padding: 5px;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #faf6f6;
+  background-color: #916953;
+  height: 100px;
+  margin-top: auto;
+}
 .about {
   font-family: 'Droid serif', serif; 
   font-size: 36px; 
@@ -198,6 +210,17 @@ textarea {
   line-height: 44px; 
   margin: 0 0 12px; 
   text-align: center;
+  text-shadow: 2px 2px #d8c8bf;
+}
+.aboutsec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutsec img {
+  margin: 20px;
+  box-shadow: 8px 8px 10px #916953;
 }
 
 .container {
@@ -304,7 +327,7 @@ textarea {
 }
 
 button {
-	background: var(--primary);
+	background: #916953;
 	border: 0;
 	border-radius: 5px;
 	color: #fff;
@@ -315,7 +338,22 @@ button {
 	padding: 10px 15px;	
 }
 
+.img-thumbnail {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
 
+.hover11 figure img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.hover11 figure:hover img {
+  opacity: .5;
+}
 
 .navActive {
   color: var(--secondary);

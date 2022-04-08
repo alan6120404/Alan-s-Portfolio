@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from '../Nav'
 
 function Header() {
+
     return (
         <header>
             <h1 className="header">Alan Lin</h1>

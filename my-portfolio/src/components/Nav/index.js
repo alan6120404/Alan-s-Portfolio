@@ -1,27 +1,28 @@
 import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import { Link } from 'react-router-dom';
 
 function Nav() {
 
   return (
-      <nav>
-        <ul className="flex-row">
-          <li>
-          <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              About me
-            </a>
-          </li>
-          <li>
-          <span onClick=''>Portfolio</span>
-          </li>
-          <li>
-              <span onClick=''>Contact</span>
-          </li>
-          <li>
-              <span onClick=''>Resume</span>
-          </li>
-        </ul>
-      </nav>
+    <nav className='col-8 nav justify-content-around p-3'>
+    <ul className='flex-row navbar-nav nav-fill w-100'>
+      <li className="mx-4 nav-item">
+        <Link to='/'>About</Link>
+      </li>
+
+      <li className="mx-4 nav-item">
+        <Link to='/contact'>Contact</Link>
+      </li>
+
+      <li className="mx-4 nav-item">
+        <Link to='/portfolio'>Portfolio</Link>
+      </li>
+
+      <li className="mx-4 nav-item">
+        <Link to='/resume'>Resume</Link>
+      </li>  
+    </ul>
+  </nav>
   );
 }
 
